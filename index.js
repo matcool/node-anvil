@@ -116,7 +116,7 @@ class Chunk {
             section = new Section(Math.floor(y / 16));
             this.sections.push(section);
         }
-        section.setBlock(block, x, y, z);
+        section.setBlock(block, x, y % 16, z);
     }
     save() {
         let sections = [];
