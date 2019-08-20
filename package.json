@@ -1,0 +1,18 @@
+{
+  "name": "node-anvil",
+  "version": "1.0.0",
+  "description": "Simple package that does stuff (currently only writing own) with the minecraft anvil format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "minecraft"
+  ],
+  "author": "matcool",
+  "license": "MIT",
+  "dependencies": {
+    "nbt-ts": "^1.0.5",
+    "shallow-equal": "^1.2.0"
+  }
+}
