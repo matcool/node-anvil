@@ -15,6 +15,15 @@ let region = new anvil.Region(0, 0);
 // 10x10 grass block platform
 region.fill(new anvil.Block('minecraft', 'grass_block'), 0, 0, 0, 9, 0, 9);
 
+// Fill mapping
+let blocks = [
+    new anvil.Block('minecraft', 'stone'),
+    new anvil.Block('minecraft', 'dirt')
+];
+region.fill((x, y, z) => {
+    return blocks[Math.floor(Math.random() * blocks.length)];
+}, 0, 0, 10, 5, 5, 15);
+
 // Oak log facing up
 region.setBlock(new anvil.Block('minecraft', 'oak_log', { axis: 'y' }), 0, 1, 0);
 

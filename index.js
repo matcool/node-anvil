@@ -175,13 +175,15 @@ class Region {
             if (!this.inside(x1, y1, z1)) throw new Error('First coordinates are outside region');
             if (!this.inside(x2, y2, z2)) throw new Error('Second coordinates are outside region');
         }
+        let isFunc = typeof block === 'function';
         // this big mess it so it goes from a1 to a2 including both endpoints
         // and making sure to increase or decrease
         for (let y = y1; y2 > y1 ? y <= y2 : y >= y2; y += y2 > y1 ? 1 : -1) {
             for (let z = z1; z2 > z1 ? z <= z2 : z >= z2; z += z2 > z1 ? 1 : -1) {
                 for (let x = x1; x2 > x1 ? x <= x2 : x >= x2; x += x2 > x1 ? 1 : -1) {
                     if (ignoreOutside && !this.inside(x, y, z)) continue;
-                    this.setBlock(block, x, y, z);
+                    if (isFunc) this.setBlock(block(x, y, z), x, y, z);
+                    else this.setBlock(block, x, y, z);
                 }
             }
         }
