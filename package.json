@@ -14,5 +14,9 @@
   "dependencies": {
     "nbt-ts": "^1.0.5",
     "shallow-equal": "^1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matcool/node-anvil.git"
   }
 }
