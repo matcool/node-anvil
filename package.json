@@ -1,6 +1,6 @@
 {
   "name": "node-anvil",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Simple package that does stuff (currently only writing own) with the minecraft anvil format",
   "main": "index.js",
   "scripts": {
